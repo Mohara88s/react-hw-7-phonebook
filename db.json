@@ -1,3 +1,29 @@
 {
-    "contacts": []
-  }
+  "contacts": [
+    {
+      "id": "369ce26b-f098-451d-809f-bb3d84826369",
+      "name": "Orlovski",
+      "number": "54654-3543543443"
+    },
+    {
+      "id": "64a09955-8747-4004-9eb5-ed08c5808f9e",
+      "name": "Orlovski",
+      "number": "54654-3543543443"
+    },
+    {
+      "id": "e22eb532-6bfd-406b-bc30-64c073d2a775",
+      "name": "Orlovski",
+      "number": "54654-3543543443"
+    },
+    {
+      "id": "1c6dec54-d7e1-417a-8055-6eb50c5f7f10",
+      "name": "Orlovski",
+      "number": "54654-3543543443"
+    },
+    {
+      "id": "e8a9bf7b-d9b8-4266-9ffb-8e05e2af294c",
+      "name": "Orlovski",
+      "number": "54654-3543543443"
+    }
+  ]
+}

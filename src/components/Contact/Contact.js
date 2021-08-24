@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Contact.module.css';
 import { useDispatch } from 'react-redux';
-import contactsActions from '../../redux/contacts/contacts-actions';
+import { deleteContact } from '../../redux/contacts/contacts-operaions';
 
 const Contact = ({ id, name, number }) => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const Contact = ({ id, name, number }) => {
       <button
         className={styles.button}
         type="button"
-        onClick={() => dispatch(contactsActions.deleteContact(id))}
+        onClick={() => dispatch(deleteContact(id))}
       >
         Delete
       </button>

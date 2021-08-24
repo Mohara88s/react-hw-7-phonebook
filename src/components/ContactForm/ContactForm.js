@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import PropTypes from 'prop-types';
 import styles from './ContactForm.module.css';
 import { connect } from 'react-redux';
-import contactsActions from '../../redux/contacts/contacts-actions';
+import { addContact } from '../../redux/contacts/contacts-operaions';
 
 class ContactForm extends Component {
   state = {
@@ -65,6 +65,6 @@ ContactForm.propTypes = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  onAddContact: contact => dispatch(contactsActions.addContact(contact)),
+  onAddContact: contact => dispatch(addContact(contact)),
 });
 export default connect(null, mapDispatchToProps)(ContactForm);

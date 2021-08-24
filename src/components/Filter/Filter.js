@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Filter.module.css';
 import { useSelector, useDispatch } from 'react-redux';
-import contactsActions from '../../redux/contacts/contacts-actions';
+import { changeFilter } from '../../redux/contacts/contacts-actions';
 
 const Filter = () => {
   const filter = useSelector(state => state.contacts.filter);
   const dispatch = useDispatch();
   const onChangeFilter = event =>
-    dispatch(contactsActions.changeFilter(event.currentTarget.value));
+    dispatch(changeFilter(event.currentTarget.value));
 
   return (
     <label className={styles.Filter}>
