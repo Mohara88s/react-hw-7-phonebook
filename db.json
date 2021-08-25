@@ -1,29 +1,19 @@
 {
   "contacts": [
     {
-      "id": "369ce26b-f098-451d-809f-bb3d84826369",
-      "name": "Orlovski",
-      "number": "54654-3543543443"
+      "id": "323424e8-89d2-44f0-a0d4-cdc579a8e6d9",
+      "name": "assa",
+      "number": "111-111"
     },
     {
-      "id": "64a09955-8747-4004-9eb5-ed08c5808f9e",
-      "name": "Orlovski",
-      "number": "54654-3543543443"
+      "id": "4a8c9d16-a2a8-4ae4-8b2e-61f92d552f56",
+      "name": "Віталій",
+      "number": "4564-641341"
     },
     {
-      "id": "e22eb532-6bfd-406b-bc30-64c073d2a775",
-      "name": "Orlovski",
-      "number": "54654-3543543443"
-    },
-    {
-      "id": "1c6dec54-d7e1-417a-8055-6eb50c5f7f10",
-      "name": "Orlovski",
-      "number": "54654-3543543443"
-    },
-    {
-      "id": "e8a9bf7b-d9b8-4266-9ffb-8e05e2af294c",
-      "name": "Orlovski",
-      "number": "54654-3543543443"
+      "id": "c0b11d50-bcc2-4b08-a97a-905f327b9e48",
+      "name": "Щкеф",
+      "number": "111-111"
     }
   ]
 }

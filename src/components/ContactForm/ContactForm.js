@@ -16,6 +16,19 @@ class ContactForm extends Component {
   hendelSubmit = event => {
     event.preventDefault();
 
+    const isAvailable = this.props.contacts.some(
+      contactItem =>
+        contactItem.name.toLowerCase() === this.state.name.toLowerCase(),
+    );
+    if (isAvailable) {
+      alert(`${this.state.name} is already in contacts.`);
+      this.setState({
+        name: '',
+        number: '',
+      });
+      return;
+    }
+
     const newContact = {
       id: uuidv4(),
       name: this.state.name,
@@ -64,7 +77,10 @@ ContactForm.propTypes = {
   onAddContact: PropTypes.func.isRequired,
 };
 
+const mapStateToProps = state => ({
+  contacts: state.contacts.items,
+});
 const mapDispatchToProps = dispatch => ({
   onAddContact: contact => dispatch(addContact(contact)),
 });
-export default connect(null, mapDispatchToProps)(ContactForm);
+export default connect(mapStateToProps, mapDispatchToProps)(ContactForm);

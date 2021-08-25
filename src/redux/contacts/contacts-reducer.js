@@ -14,18 +14,8 @@ import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
 
 const items = createReducer([], {
-  [fetchContactsRequest]: (_, { payload }) => payload,
+  [fetchContactsSuccess]: (_, { payload }) => payload,
   [addContactSuccess]: (state, { payload }) => {
-    // {
-    //   const isAvailable = state.some(
-    //     contactItem =>
-    //       contactItem.name.toLowerCase() === payload.name.toLowerCase(),
-    //   );
-    //   if (isAvailable) {
-    //     alert(`${payload.name} is already in contacts.`);
-    //     return state;
-    //   }
-    // }
     return [...state, payload];
   },
 
