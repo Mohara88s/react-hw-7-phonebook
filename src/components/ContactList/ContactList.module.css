@@ -10,3 +10,6 @@
   align-items: center;
   align-content: space-between;
 }
+.error {
+  color: red;
+}
