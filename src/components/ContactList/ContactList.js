@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 
 const ContactList = () => {
   const error = useSelector(state => state.contacts.error);
+  const loading = useSelector(state => state.contacts.loading);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchContacts());
@@ -16,6 +17,7 @@ const ContactList = () => {
   const filter = useSelector(state => state.contacts.filter);
   return (
     <>
+      {loading && <h2 className={styles.loading}>thinking...</h2>}
       {error && <h2 className={styles.error}>{error}</h2>}
       <ul className={styles.ContactList}>
         {contacts
