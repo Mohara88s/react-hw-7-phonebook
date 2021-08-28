@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './ContactForm.module.css';
 import { connect } from 'react-redux';
 import { addContact } from '../../redux/contacts/contacts-operaions';
+import contactsSelectors from '../../redux/contacts/contacts-selectors';
 
 class ContactForm extends Component {
   state = {
@@ -78,7 +79,7 @@ ContactForm.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  contacts: state.contacts.items,
+  contacts: contactsSelectors.getContacts(state),
 });
 const mapDispatchToProps = dispatch => ({
   onAddContact: contact => dispatch(addContact(contact)),
