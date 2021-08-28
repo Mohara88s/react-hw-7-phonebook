@@ -1,6 +1,6 @@
 import Contact from '../Contact/Contact';
 import styles from './ContactList.module.css';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { fetchContacts } from '../../redux/contacts/contacts-operaions';
 import { useEffect } from 'react';
 import contactsSelectors from '../../redux/contacts/contacts-selectors';
@@ -9,10 +9,10 @@ const ContactList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchContacts());
-  }, []);
-  const error = contactsSelectors.getError();
-  const loading = contactsSelectors.getLoading();
-  const filtredContacts = contactsSelectors.getFiltredContacts();
+  }, [dispatch]);
+  const error = useSelector(contactsSelectors.getError);
+  const loading = useSelector(contactsSelectors.getLoading);
+  const filtredContacts = useSelector(contactsSelectors.getFiltredContacts);
   return (
     <>
       {loading && <h2 className={styles.loading}>thinking...</h2>}
