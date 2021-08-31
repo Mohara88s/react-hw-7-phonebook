@@ -1,8 +1,7 @@
 {
-  "name": "react-hw-7-phonebook",
+  "name": "react-hw-8-phonebook",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Mohara88s.github.io/react-hw-7-phonebook",
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
     "@testing-library/jest-dom": "^5.14.1",
